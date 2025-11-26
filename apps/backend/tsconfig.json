@@ -1,0 +1,26 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    /* --- Path mapping --- */
+    "baseUrl": ".",
+    "paths": {
+      "@servicely/types": ["../../packages/types/src"]
+    },
+
+    /* --- Module + Target --- */
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ES2021",
+
+    /* --- Output --- */
+    "rootDir": "../..",
+    "outDir": "dist",
+    "noEmit": false,
+
+    /* --- Convenience --- */
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true
+  },
+  "include": ["src"]
+}
