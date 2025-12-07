@@ -10,5 +10,9 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint"
+  },
+  "dependencies": {
+    "joi": "^18.0.2",
+    "mongoose": "^8.19.2"
   }
 }
