@@ -4,6 +4,7 @@
     /* --- Path mapping --- */
     "baseUrl": ".",
     "paths": {
+      "@servicely/schemas": ["../../packages/schemas/src"],
       "@servicely/types": ["../../packages/types/src"]
     },
 
@@ -22,5 +23,5 @@
     "skipLibCheck": true,
     "strict": true
   },
-  "include": ["src"]
+  "include": ["src", "index.ts"]
 }
