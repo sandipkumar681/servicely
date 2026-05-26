@@ -1,27 +1,36 @@
 {
-  "name": "@servicely/backend",
+  "name": "@NursingPracticer/backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "dev": "ts-node-dev --respawn --transpile-only --env-file=.env index.ts",
     "build": "tsc -b",
-    "start": "node dist/index.js"
+    "start": "node --env-file=.env dist/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.20.0",
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^17.2.3",
-    "express": "^5.1.0",
-    "mongoose": "^8.19.2"
+    "@NursingPracticer/schemas": "workspace:*",
+    "@NursingPracticer/types": "workspace:*",
+    "@NursingPracticer/utils": "workspace:*",
+    "@types/nodemailer": "^8.0.0",
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "nodemailer": "^8.0.8",
+    "twilio": "^6.0.2"
   },
   "devDependencies": {
+    "@types/cookie-parser": "^1.4.10",
     "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.5",
-    "@types/node": "^20.19.24",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^25.9.1",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3"
   }

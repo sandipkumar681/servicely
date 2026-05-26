@@ -5,7 +5,6 @@
   "references": [
     { "path": "apps/web" },
     { "path": "apps/backend" },
-    { "path": "apps/mobile" },
     { "path": "packages/types" },
     { "path": "packages/utils" }
   ]

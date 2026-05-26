@@ -10,9 +10,9 @@
     "plugins": [{ "name": "next" }],
     "baseUrl": ".",
     "paths": {
-      "@servicely/types": ["../../packages/types/src/index.ts"],
-      "@servicely/utils": ["../../packages/utils/src/index.ts"],
-      "@servicely/schemas": ["../../packages/schemas/src/index.ts"]
+      "@NursingPracticer/types": ["../../packages/types/src/index.ts"],
+      "@NursingPracticer/utils": ["../../packages/utils/src/index.ts"],
+      "@NursingPracticer/schemas": ["../../packages/schemas/src/index.ts"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

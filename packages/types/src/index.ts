@@ -1,9 +1,3 @@
-// packages/types/src/user.ts
-export interface UserModelType {
-  userName: string;
-  email: string;
-}
-
-export type IUserCreate = UserModelType & {};
-
-export const a = 6;
+export type * from "./user/index.js";
+export type * from "./nurse/index.js";
+export type * from "./otp/index.js";

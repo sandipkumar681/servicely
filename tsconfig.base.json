@@ -15,9 +15,9 @@
 
     "baseUrl": ".",
     "paths": {
-      "@servicely/types/*": ["packages/types/src/*"],
-      "@servicely/utils/*": ["packages/utils/src/*"],
-      "@servicely/schemas/*": ["packages/schemas/src/*"]
+      "@NursingPracticer/types/*": ["packages/types/src/*"],
+      "@NursingPracticer/utils/*": ["packages/utils/src/*"],
+      "@NursingPracticer/schemas/*": ["packages/schemas/src/*"]
     }
   },
   "exclude": ["node_modules", "dist", "build"]

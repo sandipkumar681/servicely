@@ -1,1 +1,2 @@
-export const greet = (name: string) => `Hello, ${name}!`;
+export * from "./apiError";
+export * from "./validate";

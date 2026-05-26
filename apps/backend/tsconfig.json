@@ -4,7 +4,9 @@
     /* --- Path mapping --- */
     "baseUrl": ".",
     "paths": {
-      "@servicely/types": ["../../packages/types/src"]
+      "@NursingPracticer/types": ["../../packages/types/src"],
+      "@NursingPracticer/schemas": ["../../packages/schemas/src"],
+      "@NursingPracticer/utils": ["../../packages/utils/src"]
     },
 
     /* --- Module + Target --- */
@@ -22,5 +24,5 @@
     "skipLibCheck": true,
     "strict": true
   },
-  "include": ["src"]
+  "include": ["src", "index.ts"]
 }
