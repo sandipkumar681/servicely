@@ -15,9 +15,13 @@
 
     "baseUrl": ".",
     "paths": {
+      "@NursingPracticer/types": ["packages/types/src/index.ts"],
       "@NursingPracticer/types/*": ["packages/types/src/*"],
+      "@NursingPracticer/utils": ["packages/utils/src/index.ts"],
       "@NursingPracticer/utils/*": ["packages/utils/src/*"],
-      "@NursingPracticer/schemas/*": ["packages/schemas/src/*"]
+      "@NursingPracticer/schemas": ["packages/schemas/src/index.ts"],
+      "@NursingPracticer/schemas/*": ["packages/schemas/src/*"],
+      "@NursingPracticer/api-client": ["packages/api-client/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "dist", "build"]

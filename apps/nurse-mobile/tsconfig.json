@@ -1,0 +1,19 @@
+{
+  "extends": "@react-native/typescript-config",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@NursingPracticer/types": ["../../packages/types/src"],
+      "@NursingPracticer/types/*": ["../../packages/types/src/*"],
+      "@NursingPracticer/schemas": ["../../packages/schemas/src"],
+      "@NursingPracticer/schemas/*": ["../../packages/schemas/src/*"],
+      "@NursingPracticer/utils": ["../../packages/utils/src"],
+      "@NursingPracticer/utils/*": ["../../packages/utils/src/*"],
+      "@NursingPracticer/api-client": ["../../packages/api-client/src"],
+      "@NursingPracticer/api-client/*": ["../../packages/api-client/src/*"]
+    },
+    "types": ["jest"]
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["**/node_modules", "**/Pods"]
+}

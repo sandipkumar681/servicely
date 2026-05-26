@@ -5,13 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "start": "next start"
   },
   "dependencies": {
     "@NursingPracticer/types": "workspace:*",
-    "eslint": "^10.4.0",
-    "eslint-config-next": "^16.2.6",
     "next": "^16.2.6",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",

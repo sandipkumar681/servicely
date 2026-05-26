@@ -22,12 +22,20 @@ app.use(cookieParser());
 import healthCheckRouter from "./routes/healthcheck.routes";
 import userRouter from "./routes/user.routes";
 import sendOTPsRouter from "./routes/sendOTPs.routes";
+import nurseRouter from "./routes/nurse.routes";
+import bookingRouter from "./routes/booking.routes";
+import adminRouter from "./routes/admin.routes";
+import serviceRouter from "./routes/service.routes";
 import { ApiResponse } from "./utils/apiResponse";
 
 // Routes declaration
 app.use("/api/v1/healthcheck", healthCheckRouter);
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/otps", sendOTPsRouter);
+app.use("/api/v1/nurses", nurseRouter);
+app.use("/api/v1/bookings", bookingRouter);
+app.use("/api/v1/admin", adminRouter);
+app.use("/api/v1/services", serviceRouter);
 
 // Global error handler
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {

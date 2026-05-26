@@ -1,22 +1,13 @@
 import mongoose from "mongoose";
+import { INurseDocument, INurseModel } from "@NursingPracticer/types";
 
-// -----------------------------
-// 1. User Document Interface
-// -----------------------------
-import { INurseDocument } from "@NursingPracticer/types";
-// -----------------------------
-// 2. User Model Interface
-// -----------------------------
-import { INurseModel } from "@NursingPracticer/types";
-// -----------------------------
-// 3. Schema
-// -----------------------------
-const userSchema = new mongoose.Schema<INurseDocument>(
+const nurseSchema = new mongoose.Schema<INurseDocument>(
   {
     user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
       required: true,
+      unique: true,
     },
     certificateFile: {
       type: String,
@@ -28,22 +19,27 @@ const userSchema = new mongoose.Schema<INurseDocument>(
       required: true,
       default: false,
     },
-    services: {
-      type: [String],
-      required: true,
-      enum: [
-        "Cardiology",
-        "Dermatology",
-        "Neurology",
-        "Orthopedics",
-        "Pediatrics",
-        "Psychiatry",
-        "Urology",
-      ],
-    },
+    services: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Service",
+      },
+    ],
     location: {
+      type: {
+        type: String,
+        enum: ["Point"],
+        default: "Point",
+        required: true,
+      },
+      coordinates: {
+        type: [Number], // [longitude, latitude]
+        required: true,
+      },
+    },
+    locationText: {
       type: String,
-      required: true,
+      trim: true,
     },
     approved: {
       type: Boolean,
@@ -53,7 +49,6 @@ const userSchema = new mongoose.Schema<INurseDocument>(
     approvedBy: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
-      required: true,
     },
   },
   {
@@ -63,10 +58,10 @@ const userSchema = new mongoose.Schema<INurseDocument>(
   },
 );
 
-// -----------------------------
-// 4. Export
-// -----------------------------
+// Create 2dsphere index for location queries
+nurseSchema.index({ location: "2dsphere" });
+
 export const Nurse = mongoose.model<INurseDocument, INurseModel>(
   "Nurse",
-  userSchema,
+  nurseSchema,
 );
